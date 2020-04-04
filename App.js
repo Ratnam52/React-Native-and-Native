@@ -19,11 +19,11 @@ export default class App extends React.Component {
 
   componentDidMount() {
     this.mounted = true;
-    this.eanEvent = this.eanEvent.bind(this);
-    DeviceEventEmitter.addListener('Success', this.eanEvent)
+    this.receiveEvent = this.receiveEvent.bind(this);
+    DeviceEventEmitter.addListener('Success', this.receiveEvent)
   }
 
-  eanEvent(message) {
+  receiveEvent(message) {
     alert(message);
   }
 
